@@ -13,11 +13,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v1
         with:
-          java-version: '11' # يمكنك استخدام الإصدار الذي يناسبك
-
-      - name: Build with Gradle
-        run: ./gradlew build # إذا كنت تستخدم Gradle
+          java-version: '11' # أو أي إصدار من Java تستخدمه
 
       - name: Build with Maven
-        run: mvn package # إذا كنت تستخدم Maven
-
+        run: mvn package
