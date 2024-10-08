@@ -17,7 +17,7 @@ jobs:
 
       - name: Compile Java files
         run: |
-          javac src/calculator/*.java # تجميع جميع ملفات Java داخل src/calculator
+          javac src/Calculator/*.java # تجميع جميع ملفات Java داخل src/calculator
 
       - name: Run Java program
         run: |
