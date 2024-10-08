@@ -1,24 +1,26 @@
 name: Java CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up JDK
-        uses: actions/setup-java@v1
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
         with:
-          java-version: '11' # أو أي إصدار من Java تستخدمه
+          java-version: '11'
 
       - name: Compile Java files
-        run: |
-          javac src/Calculator/*.java # تجميع جميع ملفات Java داخل src/calculator
+        run: javac src/Calculator/*.java
 
       - name: Run Java program
-        run: |
-          java -cp src/calculator YourMainClassName # استبدل YourMainClassName باسم الملف الرئيسي (مثل Prog)
+        run: java -cp src/Calculator Prog
