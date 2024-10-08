@@ -14,11 +14,10 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: '11' # أو أي إصدار من Java تستخدمه
-
+          
       - name: Compile Java files
         run: |
-          javac *.java # قم بتغيير هذا إذا كان لديك هيكل مجلدات مختلف
-
+          javac src/*.java
       - name: Run Java program
         run: |
           java YourMainClassName # استبدل YourMainClassName باسم ملفك الرئيسي
