@@ -10,10 +10,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up JDK
-        uses: actions/setup-java@v1
-        with:
-          java-version: '11' # أو أي إصدار من Java تستخدمه
+      - name: Compile Java files
+        run: |
+          javac src/**/*.java # هذا الأمر سيجمع جميع ملفات Java داخل src والمجلدات الفرعية
           
       - name: Compile Java files
         run: |
