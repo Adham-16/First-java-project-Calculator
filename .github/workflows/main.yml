@@ -15,5 +15,10 @@ jobs:
         with:
           java-version: '11' # أو أي إصدار من Java تستخدمه
 
-      - name: Build with Maven
-        run: mvn package
+      - name: Compile Java files
+        run: |
+          javac *.java # قم بتغيير هذا إذا كان لديك هيكل مجلدات مختلف
+
+      - name: Run Java program
+        run: |
+          java YourMainClassName # استبدل YourMainClassName باسم ملفك الرئيسي
