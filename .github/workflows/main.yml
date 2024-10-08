@@ -24,4 +24,4 @@ jobs:
         run: javac src/Calculator/*.java
 
       - name: Run Java program
-        run: java -cp src/Calculator Prog
+        run: java -cp src Calculator.Prog
